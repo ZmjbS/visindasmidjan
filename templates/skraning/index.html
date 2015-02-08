@@ -1,0 +1,11 @@
+{% extends "visindasmidjan.html" %}
+
+{% block page_content %}
+<ul>
+{% for t in timayfirlit %}
+	<li style="{% if t.pontun %}color: grey;{% endif %}">
+	<span style="float: left;width:2.5em;">{{ t.timi.hefst|date:"D" }}</span> {{ t.timi.hefst|date:"Y.m.d." }} {% if t.pontun %}Bókað{% else %}<a href="#">Bóka</a>{% endif %}
+	</li>
+{% endfor %}
+</ul>
+{% endblock %}

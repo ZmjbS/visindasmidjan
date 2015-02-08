@@ -1,0 +1,38 @@
+{% extends "visindasmidjan.html" %}
+
+{% block page_content %}
+<h2>Skrá tíma</h2>
+<form action="/skraning/skra_tima" method="post">
+	{% csrf_token %}
+	<label for="hefst" style="display: inline;">Upphafsdagsetning</label>
+	<input type="text" name="hefst" size="12" />
+	<label for="hefst" style="display: inline;">Lokadagsetning</label>
+	<input type="text" name="lykur" size="12" />
+
+	<label for="lengd" style="display: inline;">Lengd</label>
+	<input type="text" name="lengd" size="4" />
+	<label for="starfsmenn" style="display: inline;">Starfsfólk</label>
+	<select>
+		{% for s in starfsmenn %}
+		<option>{{ s }}</option>
+		{% endfor %}
+	</select>
+	<input type="submit" name="skrá" value="Skrá tíma" />
+</form>
+								<h2>Skráðir tímar</h2>
+<ul>
+{% for ty in timayfirlit %}
+	<li>
+	<span style="float: left;width:2.5em">{{ ty.timi.hefst|date:"D" }}</span> {{ ty.timi.hefst|date:"Y.m.d. H:i" }}
+	{% if ty.pontun %}
+		{{ ty.pontun.gestur }}
+		{{ ty.pontun.bekkur }}. bekkur
+		{{ ty.pontun.seroskir }}
+		<a href="#" style="float:righ">Breyta</a>
+	{% else %}
+		<a href="#">Bóka</a>
+	{% endif %}
+	</li>
+{% endfor %}
+</ul>
+{% endblock %}
