@@ -26,6 +26,12 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+TEMPLATE_DIRS = (
+    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
+    # Always use forward slashes, even on Windows.
+    # Don't forget to use absolute paths, not relative paths.
+	os.path.join(os.path.dirname(__file__), '../templates',),
+)
 
 # Application definition
 
@@ -36,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'skraning',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -48,9 +55,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'Vísindasmiðjan.urls'
+ROOT_URLCONF = 'visindasmidjan.urls'
 
-WSGI_APPLICATION = 'Vísindasmiðjan.wsgi.application'
+WSGI_APPLICATION = 'visindasmidjan.wsgi.application'
 
 
 # Database
@@ -66,7 +73,8 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+#LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'is-is'
 
 TIME_ZONE = 'UTC'
 
@@ -81,3 +89,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR
