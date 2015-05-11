@@ -1,0 +1,44 @@
+/* Forsíða */
+#meginefni { width: 66%; float: left; }
+#bokatima, #itarefni { width: 45%; width: calc(50% - 1em); float: left; padding: .5em; }
+#frettir { padding: .5em; clear: both; }
+
+/* Ítarefni (smá á skráningarsíðum) */
+.itarefni { float: left; width: 220px; border: thin solid grey; height: 220px; margin: 5px; }
+
+.itarefni .titill { display: block; overflow: hidden; white-space: nowrap; position: relative; top: -1.7em; padding: 2px; font-size: 1.5em; font-weight: bold; background-color: #ddd; }
+
+.hugleiding, .hugtakaskyring, .leidbeiningar_hlid { float: right; position: absolute; right: -22em; border-width: 3px; border-style: solid; width: 20em; padding: .3em; margin: .2em; }
+
+.hugleiding { border-color: purple; background-color: #d8a; }
+.hugtakaskyring { border-color: green; background-color: #8d8; }
+.hugtakaskyring em { font-weight: bold; }
+
+/* Skráningarsíður */
+form.bokun { width: 270px; padding: 3px; margin: 13px; float: left; }
+
+table.month { float: left; margin: 1em; border-collapse: separate; border-spacing: 3px; table-layout: fixed; }
+h2.clear { clear: both; }
+
+table.month tr th { margin: 3px; color: #338; background-color: #f8f8f8; width: 36px; max-width: 36px; text-align: center; }
+table.month tr th { text-align: center; }
+table.month tr th.month { text-align: left; }
+table.month tr td { padding: 2px; text-align: right; max-width: 1em; background-color: #eee; }
+/*
+.allt_tekid { background: #e99; }
+.hluti_laus { background: #ec7; }
+.allt_laust { background: #9d9; }
+*/
+.bokahlekkur, .bokadurtimi, .nybokun { font-size: .9em; }
+.bokahlekkur { background-color: #9d9; }
+.bokadurtimi { background-color: #e99; }
+.nybokun { background-color: #ec7; }
+table.month tr td.valid { color: white; background-color: #338; }
+table.month tr td.noday { color: white; background-color: white; }
+
+#id_hefst, #id_lengd { width: 130px; }
+#id_starfsmenn { width: 270px; }
+
+/* Lagfæringar á HI css skjölunum */
+dd, dl, ul, ol { margin-bottom: .3em; }
+ul, ol { margin-left: 1em; }

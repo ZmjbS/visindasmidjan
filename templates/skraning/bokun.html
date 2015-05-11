@@ -1,0 +1,45 @@
+{% extends "visindasmidjan.html" %}
+{% load static from staticfiles %}
+
+{% block page_script %}
+<script src="{% static "skraning/js/bokun.js" %}"></script>
+<script>
+form_markup='<form class="bokun">'
+				+"{% csrf_token %}"
+				+'{% spaceless %}{{ form.as_p }}{% endspaceless %}'
+				+'<input type="reset" value="hætta við" id="hreinsihnappur" />'
+				+'<input type="submit" value="Skrá bókun" id="bokunarhnappur" />'
+				+'</form>';
+</script>
+{% endblock %}
+
+
+{% block page_content %}
+<h2>Bóka tíma</h2>
+<div class="leidbeiningar_hlid">
+	<dl>
+		<dt>Til að bóka tíma:</dt>
+		<dd><ol>
+			<li>Smellið á þann tíma sem þið viljið bóka.</li>
+			<li>Fyllið inn reitina (séróskirnar eru valkvæmar).</li>
+			<li>Smellið á "Skrá bókun".</li>
+		</ol></dd>
+	</dl>
+</div>
+{{ dagatal }}
+<!--
+<div id="bokunarform"></div>
+<h2>Tímayfirlit</h2>
+<ul>
+{% for t in timayfirlit %}
+{# Farið er í gegnum alla tímana sem view-ið sendir hingað í template-ið #}
+<li id="{{ t.timi.pk }}" style="{% if t.pontun %}color: grey;{% endif %}">
+		<span class="vikudagur" style="float: left;width:2.5em;">{{ t.timi.hefst|date:"D" }}</span>
+		<span class="dagsetning">{{ t.timi.hefst|date:"Y.m.d. H:i" }}</span>
+		{# Ef tíminn er bókaður er það skráð. Annars er bókunarhlekkur. #}
+		<span class="stada">{% if t.bokun %}Bókað{% else %}<a href="#" class="bokahlekkur" data-timalykill="{{ t.timi.pk }}">Bóka</a>{% endif %}</span>
+	</li>
+{% endfor %}
+</ul>
+-->
+{% endblock %}

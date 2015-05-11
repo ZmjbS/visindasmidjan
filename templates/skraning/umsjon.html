@@ -1,37 +1,40 @@
 {% extends "visindasmidjan.html" %}
+{% load static from staticfiles %}
+
+{% block page_script %}
+<script src="{% static "skraning/js/nyskra.js" %}"></script>
+{% endblock %}
 
 {% block page_content %}
 <h2>Skrá tíma</h2>
-<form action="/skraning/skra_tima" method="post">
+<div class="leidbeiningar_hlid">
+	<dl>
+		<dt>Til að skrá tíma:</dt>
+		<dd><ol>
+			<li>Merkið þá daga sem tímarnir verða.</li>
+			<li>Veljið tímasetningu tímans (t.d. 9:15 eða 11:00).</li>
+			<li>Merkið starfsfólkið (haldið inni Control-takkanum til að velja fleiri en einn).</li>
+			<li>Smellið á "Skrá tíma".</li>
+		</ol></dd>
+	</dl>
+</div>
+{{ dagatal }}
+<form class="nyskra" action="/skraning/skra_tima" method="post" style="float: left; margin: 1em;">
 	{% csrf_token %}
-	<label for="hefst" style="display: inline;">Upphafsdagsetning</label>
-	<input type="text" name="hefst" size="12" />
-	<label for="hefst" style="display: inline;">Lokadagsetning</label>
-	<input type="text" name="lykur" size="12" />
-
-	<label for="lengd" style="display: inline;">Lengd</label>
-	<input type="text" name="lengd" size="4" />
-	<label for="starfsmenn" style="display: inline;">Starfsfólk</label>
-	<select>
-		{% for s in starfsmenn %}
-		<option>{{ s }}</option>
-		{% endfor %}
-	</select>
+	{{ form.as_p }}
 	<input type="submit" name="skrá" value="Skrá tíma" />
 </form>
-								<h2>Skráðir tímar</h2>
+<br style="clear:both;" />
+
+<h2>Skráðir tímar</h2>
 <ul>
-{% for ty in timayfirlit %}
-	<li>
-	<span style="float: left;width:2.5em">{{ ty.timi.hefst|date:"D" }}</span> {{ ty.timi.hefst|date:"Y.m.d. H:i" }}
-	{% if ty.pontun %}
-		{{ ty.pontun.gestur }}
-		{{ ty.pontun.bekkur }}. bekkur
-		{{ ty.pontun.seroskir }}
-		<a href="#" style="float:righ">Breyta</a>
-	{% else %}
-		<a href="#">Bóka</a>
-	{% endif %}
+{% for t in timayfirlit %}
+{# Farið er í gegnum alla tímana sem view-ið sendir hingað í template-ið #}
+	<li id="{{ t.timi.pk }}" style="{% if t.pontun %}color: green;{% endif %}">
+		<span class="vikudagur" style="float: left;width:2.5em;">{{ t.timi.hefst|date:"D" }}</span>
+		<span class="dagsetning">{{ t.timi.hefst|date:"Y.m.d. H:i" }}</span>
+		{# Ef tíminn er bókaður er það skráð. Annars er bókunarhlekkur. #}
+		<span class="stada">{% if t.bokun %}{{ t.bokun.gestur }} - {{ t.bokun.bekkur }} - {{ t.bokun.seroskir }}{% else %}<a href="#" class="bokahlekkur" data-timalykill="{{ t.timi.pk }}">Bóka</a>{% endif %}</span>
 	</li>
 {% endfor %}
 </ul>
