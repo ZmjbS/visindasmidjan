@@ -402,6 +402,9 @@ function birta_lysingar(man, dag) {
 
 $(document).ready(function() {
 
+	/*
+	 * Færum class-ann 'valinn' á þann mánuð og þann dag sem valinn er.
+	 */
 	$('.manudur').click(function(){
 		$('.manudur').removeClass('valinn');
 		$(this).addClass('valinn');
@@ -411,15 +414,53 @@ $(document).ready(function() {
 		$(this).addClass('valinn');
 	});
 
+	/*
+	 * Hér er CSRF token-inn fenginn úr köku (jquery.cookie plugin-sins er
+	 * krafist), og AJAX sending jQuery sett upp til að nota hana.
+	 *  https://docs.djangoproject.com/en/1.8/ref/csrf/#how-to-use-it
+	 */
+	var csrftoken = $.cookie('csrftoken');
+	function csrfSafeMethod(method) {
+		// these HTTP methods do not require CSRF protection
+		return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+	}
+	$.ajaxSetup({
+		beforeSend: function(xhr, settings) {
+			if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+					xhr.setRequestHeader("X-CSRFToken", csrftoken);
+			}
+		}
+	});
+
+	/*
+	 * Birtum viðeigandi svar þegar lýsing er valin og skráum svörunina í gagnagrunninn.
+	 */
 	$('#lysingar').on('click', '.lysing', function(){
 		console.log($(this).data('merki'))
 		console.log('rétta er: '+merkid);
 
+		// Felum lýsingarnar.
 		$('#lysingar').hide();
+		// Búum til svarstreng til að birta.
 		string = '<h2>Það var rétt!</h2><p>...ætlum við að vona. Reyndar <strong>passar þetta'
 		if ($(this).data('merki')!=merkid) string += ' ekki';
 		string += '</strong> við merkið þitt en samkvæmt líkum ætti það að gerast í um 25% tilvika; sé engin fylgni við stjörnumerkin.</p>'
+		// Bætum svarstrengnum við á réttum stað.
 		$('#nidurstodur').append(string);
+
+	 	// Sendum svar á þjóninn.
+		$.ajax({
+			url : "skra_svar/",
+			type : "POST",
+			data : { faedingardags: '1972-'+$('.manudur.valinn').attr('id')+'-'+$('.dagur.valinn').attr('id'),
+						merki: merkid,
+						valid: $(this).data('merki'),
+			},
+			error : function(xhr,errmsg,err) {
+				console.log('ERROR');
+				console.log(xhr.status + ": " + xhr.responseText);
+			}
+		});
 	});
 
 });
