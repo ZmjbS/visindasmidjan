@@ -452,7 +452,7 @@ $(document).ready(function() {
 		$.ajax({
 			url : "skra_svar/",
 			type : "POST",
-			data : { faedingardags: '1972-'+$('.manudur.valinn').attr('id')+'-'+$('.dagur.valinn').attr('id'),
+			data : { faedingardags: '1972-'+$('.manudur.valinn').data('manudur')+'-'+$('.dagur.valinn').attr('id'),
 						merki: merkid,
 						valid: $(this).data('merki'),
 			},
