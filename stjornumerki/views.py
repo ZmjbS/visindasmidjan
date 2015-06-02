@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
+from datetime import datetime
+from stjornumerki.models import StjornumerkisSvar
 
 def nidurstodur():
     """ Sækir svör úr gagnagrunni og skilar sem dict hlut.
@@ -22,11 +24,11 @@ def skra_svar(request):
         return HttpResponse(json.dumps(return_dict))
 
     # dags verður bara sett á núverandi dagsetningu.
-    faedingardags = request.POST['faedingardags']
+    faedingardags = datetime.strptime(request.POST['faedingardags'], '%Y-%m-%d').date()
     print(faedingardags)
-    merki = request.POST['merki']
+    merki = next((v[0] for i, v in enumerate(StjornumerkisSvar.MERKI) if v[1] == request.POST['merki']), None)
     print(merki)
-    valid = request.POST['valid']
+    valid = next((v[0] for i, v in enumerate(StjornumerkisSvar.MERKI) if v[1] == request.POST['valid']), None)
     print(valid)
     # útgáfa er sett sjálfgefið í módelinu.
 
@@ -41,3 +43,4 @@ def skra_svar(request):
         return HttpResponse(json.dumps(return_dict))
 
     return_dict = { 'type': 'success', 'message': 'Svarið skráð.' }
+    return HttpResponse(json.dumps(return_dict))

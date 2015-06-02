@@ -17,18 +17,30 @@ class StjornumerkisSvar(models.Model):
         ( STEINGEIT, 'steingeit' ),
         ( VATNSBERI, 'vatnsberi' ),
         ( FISKUR, 'fiskur' ),
-        ( HRUTUR, 'hrútur' ),
+        ( HRUTUR, 'hrutur' ),
         ( NAUT, 'naut' ),
-        ( TVIBURI, 'tvíburi' ),
+        ( TVIBURI, 'tviburi' ),
         ( KRABBI, 'krabbi' ),
-        ( LJON, 'ljón' ),
+        ( LJON, 'ljon' ),
         ( MEYJA, 'meyja' ),
         ( VOG, 'vog' ),
-        ( SPORDDREKI, 'sporðdreki' ),
+        ( SPORDDREKI, 'sporddreki' ),
         ( BOGAMADUR, 'bogamaður' ),
+      #( STEINGEIT, 'steingeit' ),
+      #  ( VATNSBERI, 'vatnsberi' ),
+      #  ( FISKUR, 'fiskur' ),
+      #  ( HRUTUR, 'hrútur' ),
+      #  ( NAUT, 'naut' ),
+      #  ( TVIBURI, 'tvíburi' ),
+      #  ( KRABBI, 'krabbi' ),
+      #  ( LJON, 'ljón' ),
+      #  ( MEYJA, 'meyja' ),
+      #  ( VOG, 'vog' ),
+      #  ( SPORDDREKI, 'sporðdreki' ),
+      #  ( BOGAMADUR, 'bogamaður' ),
     )
-    dags = models.DateTimeField()
+    dags = models.DateTimeField(auto_now_add=True, blank=True)
     faedingardags = models.DateField()
     merki = models.CharField(max_length=2, choices=MERKI)
     valid = models.CharField(max_length=2, choices=MERKI)
-    utgafa = models.IntegerField(default=0)
+    utgafa = models.IntegerField(default=0, blank=True)
