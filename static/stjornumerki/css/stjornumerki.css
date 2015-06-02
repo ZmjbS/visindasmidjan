@@ -1,0 +1,15 @@
+#manudir, #dagar { margin-right: 2em; }
+button { margin-top: 1.5em; }
+
+#manudir tr { }
+#dagar tr { }
+
+#manudir tr td, #dagar tr td { padding: 2px 4px;  }
+#dagar tr td { text-align: right; }
+
+.valinn { background-color: blue; }
+
+#lysingar { clear: both; }
+#lysingar div { float: left; width: 23%; }
+
+.lysing:hover { background-color: #eee; }
