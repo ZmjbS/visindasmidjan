@@ -6,7 +6,7 @@ class StjornumerkisSvar(models.Model):
     FISKUR = 'FI'
     HRUTUR = 'HR'
     NAUT = 'NT'
-    TVIBURi = 'TV'
+    TVIBURI = 'TV'
     KRABBI = 'KR'
     LJON = 'LJ'
     MEYJA = 'MJ'
@@ -28,7 +28,7 @@ class StjornumerkisSvar(models.Model):
         ( BOGAMADUR, 'bogamaður' ),
     )
     dags = models.DateTimeField()
-    faedingardags = models.DateTimeField()
+    faedingardags = models.DateField()
     merki = models.CharField(max_length=2, choices=MERKI)
     valid = models.CharField(max_length=2, choices=MERKI)
     utgafa = models.IntegerField(default=0)
