@@ -44,3 +44,9 @@ class StjornumerkisSvar(models.Model):
     merki = models.CharField(max_length=2, choices=MERKI)
     valid = models.CharField(max_length=2, choices=MERKI)
     utgafa = models.IntegerField(default=0, blank=True)
+
+    def __str__(self):
+        return str(self.faedingardags) + ' > ' + self.merki + ' vs. ' + self.valid
+
+    class Meta:
+        verbose_name_plural = "stjörnumerkissvör"
