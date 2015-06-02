@@ -1,0 +1,168 @@
+{% load static from staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="{% static "js/jquery-2.1.3.min.js" %}"></script>
+		<script>
+			$(document).ready(function(){
+				$('span.deild').click(function() {
+					$(this).siblings().toggle()
+				})
+				$('.deild').click(function() {
+					$(this).children().toggle()
+				})
+			})
+		</script>
+		<style>
+			/*.lid, .leikm {display:none;}*/
+		</style> 
+	</head>
+  <body>
+    <ul id="deildir"> 
+      <li>
+      	<span class="deild">Premier league</span>
+      	<ul id="premier_league_lid">
+      		<li><span class="lid">Arsenal</span>
+      			<ul id="arsenal">
+      				<li class="leikm">Wojciech Szczęsny</li>
+      				<li class="leikm">Mathieu Debuchy</li>
+      				<li class="leikm">Kieran Gibbs</li>
+      				<li class="leikm">Per Mertesacker</li>
+      				<li class="leikm">Gabriel</li>
+      				<li class="leikm">Laurent Koscielny</li>
+      				<li class="leikm">Tomáš Rosický</li>
+      				<li class="leikm">Mikel Arteta</li>
+      				<li class="leikm">Jack Wilshere</li>
+      				<li class="leikm">Mesut Özil</li>
+      				<li class="leikm">Olivier Giroud</li>
+      				<li class="leikm">David Ospina</li>
+      				<li class="leikm">Theo Walcott</li>
+      				<li class="leikm">Alex Oxlade-Chamberlain</li>
+      				<li class="leikm">Aaron Ramsey</li>
+      				<li class="leikm">Alexis Sánchez</li>
+      				<li class="leikm">Nacho Monreal</li>
+      				<li class="leikm">Santi Cazorla</li>
+      				<li class="leikm">Mathieu Flamini</li>
+      				<li class="leikm">Calum Chambers</li>
+      				<li class="leikm">Danny Welbeck</li>
+      				<li class="leikm">Abou Diaby</li>
+      				<li class="leikm">Serge Gnabry</li>
+      				<li class="leikm">Francis Coquelin</li>
+      				<li class="leikm">Gedion Zelalem</li>
+      				<li class="leikm">Krystian Bielik</li>
+      				<li class="leikm">Héctor Bellerín</li>
+      				<li class="leikm">Isaac Hayden</li>
+      			</ul>
+      		</li>
+      	<li class="lid">Aston Villa</li>
+      	<li class="lid">Burnley</li>
+      	<li class="lid">Chelsea</li>
+      	<li class="lid">Crystal Palace</li>
+      	<li class="lid">Everton</li>
+      	<li class="lid">Hull City </li>
+      	<li class="lid">Leicester City</li>
+      	<li class="lid">Liverpool</li>
+      	<li class="lid">Manchester City</li>
+      	<li class="lid">Manchester United</li>
+      	<li class="lid">Newcastle United</li>
+      	<li class="lid">Queens Park Rangers</li>
+      	<li class="lid">Southampton</li>
+      	<li class="lid">Stoke City</li> 
+      	<li class="lid">Sunderland</li>
+      	<li class="lid">Swansea City</li>
+      	<li class="lid">Tottenham Hotspur</li>
+      	<li class="lid">West Bromich Albion</li>
+      	<li class="lid">West Ham United</li>
+      </ul>
+      </li>
+      <li class="deild">Football League Championship
+      	<ul id="football_league_championship_lid" class="deild">
+      		<li id="lid-291" class="lidsnafn" class="lid">Birmingham City</li>
+      		<li class="lid">Blackburn Rovers</li>
+      		<li class="lid">Blackpool</li>
+      		<li class="lid">Bolton Wanderers</li>
+      		<li class="lid">Bournemouth</li>
+      		<li class="lid">Brentford</li>
+      		<li class="lid">Brighton & Hove Albion</li>
+      		<li class="lid">Cardiff City</li>
+      		<li class="lid">Charlton Athletic</li>
+      		<li class="lid">Derby County</li>
+      		<li class="lid">Fulham</li>
+      		<li class="lid">Huddersfield Town</li>
+      		<li class="lid">Ipswich Town</li>
+      		<li class="lid">Leeds United</li>
+      		<li class="lid">Middlesbrough</li>
+      		<li class="lid">Millwall</li>
+      		<li class="lid">Norwich City</li>
+      		<li class="lid">Nottingham Forest</li>
+      		<li class="lid">Reading</li>
+      		<li class="lid">Rotherham United</li>
+      		<li class="lid">Sheffield Wednesday</li>
+      		<li class="lid">Watford</li>
+      		<li class="lid">Wigan Athletic</li>
+      		<li class="lid">Wolverhampton Wanderers</li>
+      	</ul>
+      </li>
+      <li><span class="deild">Football League One</span>
+      	<ul id="league_one" class="deild">
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul></li>
+      <li class="deild">Football League Two
+      	<ul id="league_two" class="deild">
+      		<li class="lid">Accrington Stanley</li>
+      		<li class="lid">AFC Wimbledon</li>
+      		<li class="lid">Burton Albion</li>
+      	</ul></li>s
+      <li class="deild">National League</li>
+      	<ul id="nleague" class="deild">
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">National League North</li>
+      	<ul>
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">National League South</li>
+      	<ul>
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">Northern Premier League Premier Division</li>
+      	<ul>
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">Southern Football League Premier Division</li>
+      	<ul>
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">Isthmian League Premier Division</li>
+      	<ul>
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">Northern Premier League Division One North</li>
+      	<ul>
+      		<li class="lid">Barnsley</li>
+      		<li class="lid">Bradford City</li>
+      		<li class="lid">Bristol City</li>
+      	</ul>
+      <li class="deild">Northern Premier League Division One South</li>
+    
+      <li class="deild">Southern Football League Division One Central</li>
+      <li class="deild">Southern Football League Division One South & West</li>
+      <li class="deild">Isthmian League Division One North</li>
+      <li class="deild">Isthmian League Division One South</li>
+    </ul>
+  </body>
+ </html>

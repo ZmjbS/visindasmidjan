@@ -27,19 +27,4 @@ form_markup='<form class="bokun">'
 	</dl>
 </div>
 {{ dagatal }}
-<!--
-<div id="bokunarform"></div>
-<h2>Tímayfirlit</h2>
-<ul>
-{% for t in timayfirlit %}
-{# Farið er í gegnum alla tímana sem view-ið sendir hingað í template-ið #}
-<li id="{{ t.timi.pk }}" style="{% if t.pontun %}color: grey;{% endif %}">
-		<span class="vikudagur" style="float: left;width:2.5em;">{{ t.timi.hefst|date:"D" }}</span>
-		<span class="dagsetning">{{ t.timi.hefst|date:"Y.m.d. H:i" }}</span>
-		{# Ef tíminn er bókaður er það skráð. Annars er bókunarhlekkur. #}
-		<span class="stada">{% if t.bokun %}Bókað{% else %}<a href="#" class="bokahlekkur" data-timalykill="{{ t.timi.pk }}">Bóka</a>{% endif %}</span>
-	</li>
-{% endfor %}
-</ul>
--->
 {% endblock %}
