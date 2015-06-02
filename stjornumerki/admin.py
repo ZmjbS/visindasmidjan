@@ -1,3 +1,4 @@
 from django.contrib import admin
+from stjornumerki.models import StjornumerkisSvar
 
-# Register your models here.
+admin.site.register(StjornumerkisSvar)
