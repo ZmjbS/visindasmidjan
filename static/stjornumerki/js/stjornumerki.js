@@ -29,61 +29,109 @@ var lysing = {}
 }
 */
 lysing['steingeit'] = '' +
+/*
 '<p>Þú rennur oftast saman við fjöldann, því þú ert bæði hógvær í klæðaburði og ' +
 'framkomu. Þú skeytir lítið um tískufyrirbæri og klæðist oft íhaldssömum, dökkum ' +
-'fötum úr vönduðu efni, jafnvel þegar þú ferð í samkvæmisskrúðann.</p>' /*+
-'<p>Þú ert ' +
-'iðjusöm og þægileg í viðmóti, vinnur skipulega að langtímamarkmiðum og stefnir ' +
+'fötum úr vönduðu efni, jafnvel þegar þú ferð í samkvæmisskrúðann.</p>' +
+'' +
+*/
+'<p>Þú ert iðjusöm og þægileg í viðmóti, vinnur skipulega að langtímamarkmiðum og stefnir ' +
 'að því að öðlast viðurkenningu og virðingu fyrir erfiði þitt. Þú ert þolinmóð ' +
 'og yfirleitt metnaðargjörn, einræn og seintekin, en trygg vinum þínum og ' +
 'fjölskyldu og mjög áreiðanleg í öllum samskiptum.</p> ' +
+'' +
 '<p>Veraldleg gæði, vegtyllur og ' +
 'vald skipta þig miklu máli og þú ert íhaldssöm á umhverfi þitt og átt bágt með ' +
 'að sætta þig við breytingar. Þér lætur best að vinna þar sem þú getur hækkað í ' +
 'stöðu, en ef þú starfar innan stjórnmálaflokks, hentar þér betur að aðrir ' +
 'standi í sviðsljósinu á meðan þú hefur sjálf töglin og hagldirnar á bakvið ' +
-'tjöldin.</p>' +
+'tjöldin.</p>' /*+
+'' +
 '<p>Í íþróttum heillast þú yfirleitt af greinum, þar sem þú þarft að ' +
 'sigrast á erfiðleikum, t.d. fjallgöngum eða skíðagöngum. Þér hættir til að ' +
 'halda óþarflega mikið aftur af tilfinningum þínum og sjálfsagi þinn og ' +
-'sjálfsafneitun gengur oft út í öfgar.</p>' +
-'Þú ættir að reyna að vera næmari á þarfir ' +
-'annarra og tilfinningar og losa þig við stífni og óþarfa hlédrægni, en það ' +
-'stafar oft af erfiðri æsku.</p>'
+'sjálfsafneitun gengur oft út í öfgar.</p>'
 */
 
-lysing['vatnsberi'] = '<p>Þú ert há og glæsileg, með loðnar augabrýr og óstýrilátt hár. Þú klæðist gjarnan dýrum og nýtískulegum fötum, en yfirleitt skapar þú þér þó eigin fatastíl.</p>' /*+
-'<p>Þú ert sjálfstæð í hugsun og fylgir ekki viðteknum skoðunum. Þú vilt einlæglega berjast gegn alls kyns óréttlæti, ekki síst félagslegu. Þú ert vingjarnleg og opin í framkomu og nýtur þín vel í félagslegu samhengi, bæði í stærri og minni hópum. Þú ert ævintýragjörn og stundum sérvitur, átt til bæði önuglyndi og þrjósku, ekki síst ef þú neyðist til að verja eigin sérlyndi. Þú ert hins vegar óþreytandi að berjast fyrir minni máttar.</p>' +
-'<p>Þú ert frumleg í hugsun og velur þér gjarnan óvenjulegt starfssvið, eins og t.d. stjörnufræði, fornleifafræði eða annað vísindatengt, en gætir allt eins tekið upp á því að gerast flugmaður eða skrifa vísindaskáldsögur! Þrátt fyrir mannúðlegt hjartalag ert þú oft fjarlæg og erfitt að ná sambandi við þig.'
+lysing['vatnsberi'] = '' +
+/*
+'<p>Þú ert há og glæsileg, með loðnar augabrýr og óstýrilátt hár. Þú klæðist ' +
+'gjarnan dýrum og nýtískulegum fötum, en yfirleitt skapar þú þér þó eigin ' +
+'fatastíl.</p>' +
+'' +
+*/
+'<p>Þú ert sjálfstæð í hugsun og fylgir ekki viðteknum skoðunum. Þú vilt ' +
+'einlæglega berjast gegn alls kyns óréttlæti, ekki síst félagslegu. Þú ert ' +
+'vingjarnleg og opin í framkomu og nýtur þín vel í félagslegu samhengi, bæði í ' +
+'stærri og minni hópum.</p>' +
+'' +
+'<p>Þú ert ævintýragjörn og stundum sérvitur, átt til bæði önuglyndi og ' +
+'þrjósku, ekki síst ef þú neyðist til að verja eigin sérlyndi. Þú ert hins ' +
+'vegar óþreytandi að berjast fyrir minni máttar. Þrátt fyrir mannúðlegt ' +
+'hjartalag ert þú oft fjarlæg og erfitt að ná sambandi við þig.</p>' /*+
+'' +
+'<p>Þú ert frumleg í hugsun og velur þér gjarnan óvenjulegt starfssvið, eins og ' +
+'t.d. stjörnufræði, fornleifafræði eða annað vísindatengt, en gætir allt eins ' +
+'tekið upp á því að gerast flugmaður eða skrifa vísindaskáldsögur!</p>' +
 */
 
-lysing['fiskur'] = '<p>Augu þín eru falleg og tjáningarrík og fatastíllinn er afar persónulegur, oft með frumlegu mynstri og sniði eða á hinn bóginn gömul, snjáð föt sem eigandinn hefur notað árum saman. Þú hefur afar mikinn áhuga á fótum og fótabúnaði, sem getur einkennst af sömu öfgum og annar fatnaður, en fætur þínir eru oft fallega lagaðir og nettir.</p>' /*+
-'<p>Þú ert mikil dansmanneskja og hefur yndi af allri tónlist. Þú ert víðsýn og nægjusöm og lætur vel að stjórn, nema þegar þú ert beitt þrýstingi. Þú ert einkar upptekin af þjáningum annarra, og reyndar líka þínum eigin, og átt til að finna hjá þér þörf fyrir píslarvætti. Þú ert rómantísk og dreymnir og hafa djúpa ást á lífinu, en lætur þig oft reka með straumnum og ert lítill baráttumaður, enda átt þú bágt með að vinna markvisst. Þú hefur næma eðlisávísun og ert mjög hjartahlý og hjálpsöm, enda vinamörg, en stundvísi er ekki þín sterkasta hlið. Þú hefur mikla sköpunargáfu og finnur þér oft starf sem tengist listum, gjarnan ljóðlist eða rómantískum bókmenntum. Þú ert mögulega tónlistarmaður eða vinnur við kvikmyndir. Þú hefur líka einlægan áhuga á náttúrunni og umhverfisvernd, trúarbrögðum og félagslega bágstöddu fólki, svo störf á þeim vettvangi gætu veitt þér mikla ánægju. Draumlyndi þitt veldur því hins vegar að þú verður oft fyrir vonbrigðum í lífinu.</p>'
+lysing['fiskur'] = '' +
+/*
+'<p>Augu þín eru falleg og tjáningarrík og fatastíllinn er afar persónulegur, ' +
+'oft með frumlegu mynstri og sniði eða á hinn bóginn gömul, snjáð föt sem ' +
+'eigandinn hefur notað árum saman. Þú hefur afar mikinn áhuga á fótum og ' +
+'fótabúnaði, sem getur einkennst af sömu öfgum og annar fatnaður, en fætur þínir ' +
+'eru oft fallega lagaðir og nettir.</p>' /*+
+'' +
+*/
+'<p>Þú ert mikil dansmanneskja og hefur yndi af allri tónlist. Þú ert víðsýn og ' +
+'nægjusöm og lætur vel að stjórn, nema þegar þú ert beitt þrýstingi. Þú ert ' +
+'einkar upptekin af þjáningum annarra, og reyndar líka þínum eigin, og átt til ' +
+'að finna hjá þér þörf fyrir píslarvætti.</p>' +
+'' +
+'<p>Þú ert rómantísk og dreymnir og hafa djúpa ást á lífinu, en lætur þig oft ' +
+'reka með straumnum og ert lítill baráttumaður, enda átt þú bágt með að vinna ' +
+'markvisst. Þú hefur næma eðlisávísun og ert mjög hjartahlý og hjálpsöm, enda ' +
+'vinamörg, en stundvísi er ekki þín sterkasta hlið.</p>' /*+
+'' +
+'<p>Þú hefur mikla sköpunargáfu og finnur þér oft starf sem tengist listum, ' +
+'gjarnan ljóðlist eða rómantískum bókmenntum. Þú ert mögulega tónlistarmaður eða ' +
+'vinnur við kvikmyndir. Þú hefur líka einlægan áhuga á náttúrunni og ' +
+'umhverfisvernd, trúarbrögðum og félagslega bágstöddu fólki, svo störf á þeim ' +
+'vettvangi gætu veitt þér mikla ánægju.</p>'
 */
 
-lysing['hrutur'] = ' ' +
+lysing['hrutur'] = '' +
+/*
 '<p>Þú ert oft grönn og spengileg. Þú ert lítið hrifin af skrautgripum og fötum sem ' +
 'hefta hreyfingafrelsi þitt, enda hvatvís og lifandi og fljót að bregðast við.</p>' /*+
-'<p>Þú hefur oftast ríka þörf fyrir að tjá þig ' +
-'í verki. Það er dugandi, blátt áfram og á bágt með að þola tafir og ' +
-'aðgerðaleysi. Þið eruð óþolinmóð og þrjósk, en líka gædd persónu-töfrum og ' +
-'stefna einbeitt að settu marki. Þið eruð fæddir leiðtogar og fljót að hugsa, en ' +
-'eðlislæg hreinskilni veldur því að þið eigið bágt með að segja ósatt og eruð ' +
-'oft bæði saklaus og einlæg í hjarta. Þið hafið gaman af íþróttum, helst ef í ' +
-'þeim felst hraði, hreyfing og líkamleg snerting, enda finnst ykkur fátt verra ' +
-'en sitja aðgerðalaus. Þið eruð í eðli ykkar brautryðjendur, svo þið hneigist ' +
-'til að velja ykkur starf sem krefjast frumlegrar hugsunar, og mörg ykkar gerast ' +
-'vísindamenn, uppfinningamenn, skurðlæknar, geðlæknar eða sálfræðingar, en þið ' +
-'getið allt eins tekið upp á því að reka eigin fyrirtæki, iðulega innan nýrrar ' +
-'starfsgreinar. Þið heillist líka af stjórnmálum og ert oft virkir félagar eða í ' +
-'stjórn síns stéttarfélags. Ef þið ætlið að ná langt, þurfið þið að læra að ' +
-'stjórna skapi ykkar og ættuð að huga meira að þörfum og skoðunum annarra, til ' +
-'að komast hjá árekstrum.</p>'
+'' +
+*/
+'<p>Þú hefur oftast ríka þörf fyrir að tjá þig í verki. Þú ert dugandi, blátt ' +
+'áfram og átt bágt með að þola tafir og aðgerðaleysi. Þú ert óþolinmóð og ' +
+'þrjósk, en líka gædd persónu-töfrum og stefnir einbeitt að settu marki. Þú ' +
+'ert fæddur leiðtogi og fljót að hugsa, en eðlislæg hreinskilni veldur því ' +
+'að þú átt bágt með að segja ósatt og ert oft bæði saklaus og einlæg í ' +
+'hjarta.</p>' +
+'' +
+'<p>Þú hefur gaman af íþróttum, helst ef í þeim felst hraði, hreyfing og ' +
+'líkamleg snerting, enda finnst þér fátt verra en að sitja aðgerðalaus.</p>' /*+
+'' +
+'<p>Þú ert í eðli þínu brautryðjandi, svo þú hneigist til að velja þér starf ' +
+'sem krefst frumlegrar hugsunar, og gerast gjarnan vísindamaður, ' +
+'uppfinningamaður, skurðlæknir, geðlæknir eða sálfræðingur, en þú getur allt ' +
+'eins tekið upp á því að reka eigin fyrirtæki, iðulega innan nýrrar ' +
+'starfsgreinar. Þú heillast líka af stjórnmálum og ert oft virkur félagi eða í ' +
+'stjórn þíns stéttarfélags.</p>' +
 */
 
-lysing['naut'] = '<p>Þú ert með gildan háls, lágt enni og hrokkið hár.  Oftast ' +
-'ertu íhaldssöm í klæðaburði en getur þó ekki stillt þig um áberandi fylgihluti, ' +
-'t.d. skartgripi, bindi, sokka o.s.frv.</p>' /*+
+lysing['naut'] = '' +
+/*
+'<p>Þú ert með gildan háls, lágt enni og hrokkið hár. Oftast ertu íhaldssöm í ' +
+'klæðaburði en getur þó ekki stillt þig um áberandi fylgihluti, t.d. skartgripi, ' +
+'bindi, sokka o.s.frv.</p>' +
+'' +
+*/
 '<p>Þú ert lífsnautnamanneskja og kannt vel að meta sætindi og góðan mat, eins og ' +
 'reyndar öll veraldleg gæði og líkamleg atlot. Þú ert líka stöðuglynd og þrjósk ' +
 'og hvikar ekki út af þeirri leið sem þú velur þér.</p>' +
@@ -94,75 +142,85 @@ lysing['naut'] = '<p>Þú ert með gildan háls, lágt enni og hrokkið hár.  O
 '' +
 '<p>Þú ert orðheldin, þolinmóð og trygglynd, og hefur einkar gott minni, en getur ' +
 'verið gríðarlega skapbráð, langrækin og afbrýðisöm. Það getur verið nærri því ' +
-'ógerlegt að fá þig til að skipta um skoðun.</p>' +
+'ógerlegt að fá þig til að skipta um skoðun.</p>' /*+
 '' +
-'//Atvinna' +
-'<p>Þú hefur næmt auga fyrir fegurð og ' +
-'listum, og oft hneigist þú til starfa sem tengjast slíku, gjarnan innan ' +
-'bókmennta eða myndlistar, en ekki síður starfa innan fjármálaheimsins.</p>'
+'<p>Þú hefur næmt auga fyrir fegurð og listum, og oft hneigist þú til starfa ' +
+'sem tengjast slíku, gjarnan innan bókmennta eða myndlistar, en ekki síður ' +
+'starfa innan fjármálaheimsins.</p>'
 */
 
 lysing['tviburi'] = ''+
-'<p>Þú ert heldur lágvaxin, grönn og líkamlega veikbyggð.</p>' /*+
+/*
+'<p>Þú ert heldur lágvaxin, grönn og líkamlega veikbyggð.</p>' +
 '' +
+*/
 '<p>Þitt helsta einkenni er að gera margt í einu; tala mikið og gjarnan með miklu ' +
 'handapati og þú virðist aldrei geta verið kyrr. Þú ert gríðarlega forvitin og ' +
 'hefur mikla þörf fyrir að skiptast á hugmyndum og skoðunum við aðra.</p>' +
 '' +
-'<p>Líklega vinnur þú við fjölmiðla eða sem sölumaður. Þú ert fjölhæf, greind og ' +
-'fljót að hugsa, einkum í öllum tjáskiptum, en þú getur líka verið kaldhæðin, ' +
-'hvikul og óáreiðanleg og fljót að gleyma öllum loforðum. Þó þú hrífist af ' +
-'alls kyns hugmyndum, hafa þú ekki endilega ýkja mikla þörf fyrir að sjá þeim ' +
-'hrint í framkvæmd. Þú ert oftast daðurgjörn og yfirborðskennd og þú talar ' +
-'stöðugt.  Versti óvinur þinn er leiðindi og þú gerir næstum hvað sem er til ' +
-'að komast hjá þeim.</p>'
+'Þú ert fjölhæf, greind og fljót að hugsa, einkum í öllum tjáskiptum, en þú ' +
+'getur líka verið kaldhæðin, hvikul og óáreiðanleg og fljót að gleyma öllum ' +
+'loforðum.</p>' +
+'' +
+'<p>Þó þú hrífist af alls kyns hugmyndum, hafa þú ekki endilega ýkja mikla þörf ' +
+'fyrir að sjá þeim hrint í framkvæmd. Þú ert oftast daðurgjörn og yfirborðskennd ' +
+'og þú talar stöðugt. Versti óvinur þinn er leiðindi og þú gerir næstum hvað sem ' +
+'er til að komast hjá þeim.</p>' /*+
+'' +
+'<p>Líklega vinnur þú við fjölmiðla eða sem sölumaður.</p>'
 */
 
 lysing['krabbi'] = '' +
+/*
 '<p>Þú ert búlduleitin og föl. Þú reynir að klæða sig eins og tíðkast í  ' +
 'umhverfi þínu, en fylgist samt illa með tískunni og velur oft saman ' +
-'óheppilegar flíkur eða föt sem komin eru úr tísku.</p>' /*+
-'<p>Þú ert trygglynd, tilfinninganæm og viðkvæm og vilt vernda aðra og hlú ' +
+'óheppilegar flíkur eða föt sem komin eru úr tísku.</p>' +
+'' +
+*/
+'<p>Þú ert trygglynd, tilfinninganæm og viðkvæm og vilt vernda aðra og hlúa ' +
 'að þeim. Þú ert mikil fjölskyldumanneskja og líður yfirleitt best heima, innan ' +
 'um ættingja og nána vini. Þú ert fús til að hlusta á vandamál annarra, gefa góð ' +
 'ráð og miðla af reynslu þinni, en þú ert líka auðsærð og spéhrædd og gleymir ' +
-'aldrei því sem gert er á hluta þinn. Þú býrð yfir miklu innsæi og djúpum ' +
-'tilfinningum en hættir til tortryggni og drottnunargirni. Öðrum finnst oft að ' +
-'þú sért að kæfa þá með tilfinningum.</p>' +
+'aldrei því sem gert er á hluta þinn.</p>' +
 '' +
-'//Atvinna' +
+'<p>Þú býrð yfir miklu innsæi og djúpum tilfinningum en hættir til tortryggni ' +
+'og drottnunargirni. Öðrum finnst oft að þú sért að kæfa þá með ' +
+'tilfinningum.</p>' /*+
+'' +
 '<p>Viðskipti eiga vel við þig, einkum lítil fyrirtæki og þá gjarnan ' +
 'fjölskyldufyrirtæki, en þú ert líka hrifin af góðum mat og matargerð, svo þér ' +
-'lætur ágætlega að reka veitingahús. Þér hættir til að hafa óþarfa áhyggjur af ' +
-'öllu milli himins og jarðar, og þú þarft að læra að gera greinarmun á því og ' +
-'eðlilegri varkárni, svo lífið verði þér ekki of þungbært.</p>'
+'lætur ágætlega að reka veitingahús.</p>'
 */
 
 lysing['ljon'] = '' +
+/*
 '<p>Þú ert oft bein í baki, mittismjó og með stutta fótleggi og hættir til að ' +
 'fitna, en ferð yfirleitt ekki í megrun fyrr en slíkt er óumflýjanlegt. Þú ' +
 'fylgir yfirleitt tískunni og ert vel klædd, en hættir samt til öfga. Þú ert ' +
-'veik fyrir skrauti og skartgripum, ekki síður en gullhömrum og aðdáun.</p>' /*+
-'<p>Þú hefur ' +
-'mikla þörf fyrir að vekja athygli og vilt vera miðpunktur hvar sem þú ert ' +
-'stödd. Þú ert opin, félagslynd og skapandi, hjartahlý og lífsglöð.</p>' +
-'<p>Þú hefur gaman af að ' +
-'leika þér, en þú getur líka verið hrokafull, sjálfumglöð og eigingjörn. Þú ert ' +
-'í eðli þínu örlát og bjartsýn og eldmóðurinn er gríðarlegur, ekki síst í ' +
-'ástamálum, þar sem þú upphefur hvert einasta smáskot og lítur á það sem ' +
-'rómantíska stórmynd þar sem þú leikur sjálf aðalhlutverkið. Ást þín á hinu ' +
-'leikræna verður oft til þess að þú reynir fyrir þér í skemmtanaiðnaðinum, ' +
-'einkum leiklist og rokktónlist, en reyndar ert þú ánægð alls staðar þar sem ' +
-'þú færð að njóta þín og vekja athygli. Þó að annað fólk laðist yfirleitt að ' +
-'þér, öðlast þú ef til vill mesta lífshamingju ef því tekst að þjálfa með þér ' +
-'hæfileika til að taka sjálft sig ekki alltof hátíðlega.</p>'
+'veik fyrir skrauti og skartgripum, ekki síður en gullhömrum og aðdáun.</p>' +
+'' +
+*/
+'<p>Þú hefur mikla þörf fyrir að vekja athygli og vilt vera miðpunktur hvar sem ' +
+'þú ert stödd. Þú ert opin, félagslynd og skapandi, hjartahlý og lífsglöð.</p>' +
+'' +
+'<p>Þú hefur gaman af að leika þér, en þú getur líka verið hrokafull, ' +
+'sjálfumglöð og eigingjörn. Þú ert í eðli þínu örlát og bjartsýn og eldmóðurinn ' +
+'er gríðarlegur, ekki síst í ástamálum, þar sem þú upphefur hvert einasta ' +
+'smáskot og lítur á það sem rómantíska stórmynd þar sem þú leikur sjálf ' +
+'aðalhlutverkið.</p>' /*+
+'' +
+'<p>Ást þín á hinu leikræna verður oft til þess að þú reynir fyrir þér í ' +
+'skemmtanaiðnaðinum, einkum leiklist og rokktónlist, en reyndar ert þú ánægð ' +
+'alls staðar þar sem þú færð að njóta þín og vekja athygli.</p>'
 */
 
 lysing['meyja'] = '' +
+/*
 '<p>Þú ert gjarnan auðþekkjanleg af háum kollvikum, en þá ekki síður stórum og ' +
 'hreinum augum. Þú klæðir þig tilgerðarlaust og smekklega, en eltir ekki ' +
 'endilega nýjustu tískugrillur.</p>' /*+
 '' +
+*/
 '<p>Þú ert hagsýn og dugleg, en lítið gefin fyrir langar og hugmyndafræðilegar ' +
 'samræður og vilt miklu frekar láta verkin tala. Þú vilt helst vera á fartinni, ' +
 'ekki þó stefnulaust heldur við að sinna einhverjum verkefnum.</p>' +
@@ -172,9 +230,8 @@ lysing['meyja'] = '' +
 'haldin fullkomnunaráráttu og getur búið yfir óhóflega mikilli sjálfsgagnrýni og ' +
 'smámunasemi. Þú hefur rökfasta hugsun og oft hvassa tungu, og átt bágt með að ' +
 'þola hirðuleysi og slóðaskap. Þú ert áreiðanleg og hjálpsöm og fús að vera ' +
-'öðrum innan handar.</p>' +
+'öðrum innan handar.</p>' /*+
 '' +
-'//Atvinna' +
 '<p>Þú lætur ágætlega hjúkrun og reyndar hvert það starf sem krefst nákvæmni og ' +
 'sjálfsaga, t.d. úrsmíði eða tölvuvinna af öllu tagi. Þú ert smekkvís og getur ' +
 'gert það gott sem fatahönnuður eða í listiðnaði, helst þá þeim greinum þar sem ' +
@@ -182,59 +239,72 @@ lysing['meyja'] = '' +
 */
 
 lysing['vog'] = '' +
+/*
 '<p>Þú vekur oft rómantískar tilfinningar og þykir kynþokkafull, enda klæðir þú þig ' +
 'oft djarflega og tælandi. Einna mest áberandi í fari þínu er þó hvað þú ert ' +
 'blátt áfram og óþvinguð.</p>' /*+
-'Þú ert ' +
-'gædd miklum persónutöfrum en ert oft dul og vilt ekki bera vandamál þín á torg ' +
-'og þú átt líka oft erfitt með að taka ákvarðanir. Engu að síður þér mikið í mun ' +
-'að ná markmiðum þínum, hvort sem það er félagslega eða í samböndum, t.d. ' +
-'hjónabandi. Þú ert í eðli þínu diplómatísk og mikill sáttasemjari og átt ' +
-'auðvelt með að lægja öldur. Þú hefur sterka réttlætiskennd, en þolir illa ' +
-'háværar deilur og ósamlyndi af öllu tagi. Þú vilt mjög gjarnan fá að vita að þú ' +
-'þért mikils metin og átt bágt með að vera ein. Þess vegna velur þú þér störf, ' +
-'þar sem mannleg samskipti ert í fyrirrúmi, og nýtur þín einkar vel í ' +
-'opinbert starfi. Þér hættir til að gera öðrum hærra undir höfði en sjálfri ' +
-'þér og mættir gjarnan tileinka þér meiri sjálfsþekkingu og ýtni, ekki síst ' +
-'ef þú ætlar að ná frægð og frama.</p>'
+'' +
+*/
+'<p>Þú ert gædd miklum persónutöfrum en ert oft dul og vilt ekki bera vandamál ' +
+'þín á torg. Þú átt líka oft erfitt með að taka ákvarðanir. Engu að síður þér ' +
+'mikið í mun að ná markmiðum þínum, hvort sem það er félagslega eða í samböndum, ' +
+'t.d. hjónabandi.</p>' +
+'' +
+'<p>Þú ert í eðli þínu diplómatísk og mikill sáttasemjari og átt auðvelt með að ' +
+'lægja öldur. Þú hefur sterka réttlætiskennd, en þolir illa háværar deilur og ' +
+'ósamlyndi af öllu tagi. Þú vilt mjög gjarnan fá að vita að þú sért mikils metin ' +
+'og átt bágt með að vera ein.</p>' /*+
+'' +
+'<p>Þú velur þér störf, þar sem mannleg samskipti ert í fyrirrúmi, og nýtur þín ' +
+'einkar vel í opinbert starfi.</p>'
 */
 
 lysing['sporddreki'] = '' +
+/*
 '<p>Þú ert grönn, með hvöss og djúp augu og þungar augabrýr. Þú ert yfirleitt afar ' +
 'kynþokkafull og klæðir þig líka þannig, gjarnan í flegnar blússur eða svört ' +
 'leðurföt.</p>' /*+
+'' +
+*/
 '<p>Þú tengist djúpum tilfinningum, yfirleitt þeim sem snerta kynlíf og ' +
 'sjálfsbjargarhvöt. Flestum þykir þú leyndardómsfull og spennandi. Undir ' +
 'heilsteyptu ytra borði leynist gríðarleg tilfinningaólga, afbrýðisemi og ' +
 'ástríða, og þú reynir af fremsta megni að skapa þér tilfinningalegt öryggi í ' +
-'heimi sem þér finnst fjandsamlegur. Þú hefur mjög næma eðlisávísun og fæstir ' +
-'geta farið á bak við þig. Þþú hefur oftast mikinn áhuga á yfirskilvitlegum ' +
-'efnum. Þú ert hefnigjörn en einbeitt og þolgóð og gefst ekki upp fyrr en í ' +
-'fulla hnefana. Þú værir framúrskarandi byltingarmaður, einkum af öfgakenndara ' +
-'taginu, en þú kastar þér reyndar af ástríðu út í hverja þá vinnu sem vekur ' +
-'áhuga þinn og kitlar ímyndunaraflið. Í íþróttum velur þú þér iðulega eitthvað ' +
-'sem hætta fylgir (eða gæti fylgt), t.d. skylmingar, karate og teygjuhopp, en þú ' +
-'hafur líka yndi af dansi og tónlist.</p>'
+'heimi sem þér finnst fjandsamlegur.</p>' +
+'' +
+'<p>Þú hefur mjög næma eðlisávísun og fæstir geta farið á bak við þig. Þú hefur ' +
+'oftast mikinn áhuga á yfirskilvitlegum efnum. Þú ert hefnigjörn en einbeitt og ' +
+'þolgóð og gefst ekki upp fyrr en í fulla hnefana.</p>' /*+
+'' +
+'<p>Þú værir framúrskarandi byltingarmaður, einkum af öfgakenndara taginu, en þú ' +
+'kastar þér reyndar af ástríðu út í hverja þá vinnu sem vekur áhuga þinn og ' +
+'kitlar ímyndunaraflið. Í íþróttum velur þú þér iðulega eitthvað sem hætta ' +
+'fylgir (eða gæti fylgt), t.d.  skylmingar, karate og teygjuhopp, en þú hafur ' +
+'líka yndi af dansi og tónlist.</p>'
 */
 
 lysing['bogamadur'] = '' +
-'<p>Þú hefur hátt enni og beinar augabrúnir. Þú klæðist gjarnan íþróttagöllum eða ' +
-'öðrum tilgerðarlausum fatnaði, en ert sjaldnast hirðuleysisleg.</p>' /*+
-'<p>Þú ert gjarnan ' +
-'mikil matmanneskja , en þú ert líka mikið gefin fyrir íþróttir, svo þú ferð ' +
-'yfirleitt ekki að fitna fyrr en upp úr miðjum aldri, þegar þú hættir að hreyfa ' +
-'sig eins mikið. Þú hefur einlæga ást á sannleika og réttlæti, en hættir til að ' +
-'láta skoðanir þínar alltof opinskátt í ljós, iðulega óumbeðin! Þú hefur líka ' +
-'djúpa þörf fyrir að víkka sjóndeildarhring þinn og hefur því mörg áhugamál, auk ' +
-'þess sem þú hafa þérstakt dálæti á ferðalögum. Þú ert lífsglöð, opin og ' +
-'hreinskilin mannvinur, en hefur litla þolinmæði með smávægilegum vandamálum ' +
-'hversdagslífsins. Þú hefur lítinn áhuga á fjármálum og helst iðulega illa á ' +
-'peningum, enda veik fyrir fjárhættuspilum. Þú velur þér oft starf þar sem þú ' +
-'ert mikið á ferð og flugi. Þú ert fyrirtaks leiðsögumaður, íþróttamaður eða ' +
-'íþróttaþjálfari eða jafnvel áhættuleikari í kvikmyndum, en Þú værir líka í ' +
-'essinu þínu ef þú ynnir í spilavíti! Þú þolir síst af öllu yfirborðsmennsku og ' +
-'mættir oft tileinka þér meira umburðarlyndi gagnvart almennum kurteisisvenjum ' +
-'og siðum.</p>'
+/*
+'<p>Þú hefur hátt enni og beinar augabrúnir. Þú klæðist gjarnan íþróttagöllum ' +
+'eða öðrum tilgerðarlausum fatnaði, en ert sjaldnast hirðuleysisleg. Þú ert ' +
+'gjarnan mikil matmanneskja, en þú ert líka mikið gefin fyrir íþróttir, svo þú ' +
+'ferð yfirleitt ekki að fitna fyrr en upp úr miðjum aldri, þegar þú hættir að ' +
+'hreyfa sig eins mikið.</p>' +
+'' +
+*/
+'<p>Þú hefur einlæga ást á sannleika og réttlæti, en hættir til að láta skoðanir ' +
+'þínar alltof opinskátt í ljós, iðulega óumbeðin! Þú hefur líka djúpa þörf fyrir ' +
+'að víkka sjóndeildarhring þinn og hefur því mörg áhugamál, auk þess sem þú hafa ' +
+'þérstakt dálæti á ferðalögum.</p>' +
+'' +
+'<p>Þú ert lífsglöð, opin og hreinskilin mannvinur, en hefur litla þolinmæði með ' +
+'smávægilegum vandamálum hversdagslífsins. Þú hefur lítinn áhuga á fjármálum og ' +
+'helst iðulega illa á peningum, enda veik fyrir fjárhættuspilum.</p>' /*+
+'' +
+'<p>Þú velur þér oft starf þar sem þú ert mikið á ferð og flugi.  Þú ert ' +
+'fyrirtaks leiðsögumaður, íþróttamaður eða íþróttaþjálfari eða jafnvel ' +
+'áhættuleikari í kvikmyndum, en Þú værir líka í essinu þínu ef þú ynnir í ' +
+'spilavíti!</p>'
 */
 
 function merki(man, dag) {
