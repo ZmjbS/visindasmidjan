@@ -9,8 +9,18 @@ def nidurstodur():
     """
 
     svor = StjornumerkisSvar.objects.all()
+    fjoldi = 0
+    sama = 0
+    hlutfall = 0
+
     for svar in svor:
-        print('do')
+        fjoldi += 1
+        if svar.merki == svar.valid:
+            sama += 1
+
+    hlutfall = sama/fjoldi
+
+    return hlutfall
 
 def skra_svar(request):
     """ Skráir svar við Stjörnumerkjakönnuninni.
@@ -42,5 +52,5 @@ def skra_svar(request):
         return_dict = { 'type': 'error', 'message': 'Gat ekki vistað svar.' }
         return HttpResponse(json.dumps(return_dict))
 
-    return_dict = { 'type': 'success', 'message': 'Svarið skráð.' }
+    return_dict = { 'type': 'success', 'message': 'Svarið skráð.', 'hlutfall': nidurstodur(), }
     return HttpResponse(json.dumps(return_dict))

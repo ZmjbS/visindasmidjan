@@ -12,6 +12,20 @@ var heiti = [
 	'sporddreki',
 	'bogamadur',
 ]
+var heiti_isl = [
+	'steingeit',
+	'vatnsberi',
+	'fiskur',
+	'hrútur',
+	'naut',
+	'tvíburi',
+	'krabbi',
+	'ljón',
+	'meyja',
+	'vog',
+	'sporðdreki',
+	'bogamaður',
+]
 var lysing = {}
 /* var lysing = {
 	'steingeit': 'Steingeit.',
@@ -442,9 +456,13 @@ $(document).ready(function() {
 		// Felum lýsingarnar.
 		$('#lysingar').hide();
 		// Búum til svarstreng til að birta.
-		string = '<h2>Það var rétt!</h2><p>...ætlum við að vona. Reyndar <strong>passar þetta'
-		if ($(this).data('merki')!=merkid) string += ' ekki';
-		string += '</strong> við merkið þitt en samkvæmt líkum ætti það að gerast í um 25% tilvika; sé engin fylgni við stjörnumerkin.</p>'
+		string = '<h2>Takk fyrir þáttökuna!</h2>'
+		string += '<p>Þú valdir lýsingu sem almennt er tengd við stjörnumerkið '+ $(this).data('merki') +'.'
+		if ($(this).data('merki')!=merkid)
+			string += ' Það <strong style="color: red">passar reyndar ekki</strong> við klassíska stjörnumerkið þitt, '+ merkid +'.'
+		else
+			string += ' Það <strong style="color: green">passar einmitt</strong> við klassíska stjörnumerkið þitt.'
+		string += ' Ef engin tengsl eru á milli persónugerðar fólks og þess stjörnumerkis sem það er í, ætti (að öllu öðru jöfnu) 25% þáttakenda að ramba á það merki sem klassíski stjörnuhringurinn úthlutar fólki.'
 		// Bætum svarstrengnum við á réttum stað.
 		$('#nidurstodur').append(string);
 
@@ -460,6 +478,17 @@ $(document).ready(function() {
 				console.log('ERROR');
 				console.log(xhr.status + ": " + xhr.responseText);
 			}
+		})
+		.done(function(msg) {
+			console.log(msg);
+			//hlutfall = jQuery.parseJSON(msg);
+			//hlutfall = jQuery.parseJSON(msg).hlutfall * 100;
+			hlutfall = Math.round(jQuery.parseJSON(msg).hlutfall * 100);
+			//hlutfall = jQuery.parseJSON(msg) * 100;
+			//hlutfall = parseFloat(jQuery.parseJSON(msg)) * 100;
+			//hlutfall = Math.round(parseFloat(jQuery.parseJSON(msg)) * 100);
+
+			$('#nidurstodur').append('Hlutfall þeirra sem hafa tekið þátt í þessu litla verkefni og hitt á "sitt merki" er '+ hlutfall +'%.');
 		});
 	});
 
