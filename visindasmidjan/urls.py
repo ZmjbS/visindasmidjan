@@ -4,8 +4,7 @@ from django.views.generic import TemplateView
 from visindasmidjan.views import StaticView
 
 urlpatterns = [
-    #url(r'^$', 'visindasmidjan.views.forsida', name='forsida'),
-    url(r'^$', 'eldar.views.forsida', name='forsida'),
+    url(r'^$', 'visindasmidjan.views.forsida', name='forsida'),
     url(r'^skraning/', include('skraning.urls')),
 
     url(r'^itarefni/$', TemplateView.as_view(template_name='itarefni/index.html'), { 'page': 'itarefni', } ),
