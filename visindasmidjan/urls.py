@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^um_visindasmidjuna/', 'visindasmidjan.views.um_visindasmidjuna'),
 
     url(r'^stjornumerki/', include('stjornumerki.urls')),
+    url(r'^slembimynstur/', include('slembimynstur.urls')),
 
     url(r'^konnun/', include('konnun.urls')),
 
