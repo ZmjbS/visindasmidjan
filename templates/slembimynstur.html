@@ -1,0 +1,36 @@
+{% extends "visindasmidjan.html" %}
+{% load static from staticfiles %}
+
+{% block page_script %}
+<script src="{% static "stjornumerki/js/stjornumerki.js" %}"></script>
+<link type="text/css" rel="stylesheet" href="{% static "stjornumerki/css/stjornumerki.css" %}" media="all" />
+<script>
+function slembimynstur() {
+	for (line=0; line<100; line++) {
+		for (row=0; row<100; row++) {
+			echo('x');
+		}
+	}
+}
+function reglumynstur() {
+}
+//$(dagatal())
+</script>
+{% endblock %}
+
+{% block page_content %}
+<main>
+<header>
+<h1>Slembimynstur</h1>
+<p>Þessi síða kannar sýn þína á slembni (e. random). Hér að neðan eru tvær myndir með misstórum punktum. Önnur er algerlega slembin þannig að það er engin regla hvenær kemur stór punktur og hvenær lítill. Á hinni er ákveðin regla sem úthlutar hvenær skuli vera stór og hvnær lítill.</p>
+</header>
+
+<section id="munstur">
+
+<button onclick="slembimynstur()">Birta lýsingar</button>
+</section>
+
+<section id="lysingar"></section>
+
+<section id="nidurstodur"></section>
+{% endblock %}
