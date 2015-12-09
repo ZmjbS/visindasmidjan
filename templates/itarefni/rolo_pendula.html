@@ -1,0 +1,134 @@
+{% extends "visindasmidjan.html" %}
+{% load static from staticfiles %}
+
+{% block page_content %}
+
+<p>Listræna rólan Róló Pendúla er alveg eins og venjuleg leikvallaróla nema að því leyti að við hana er búið að bæta penna á hreyfanlegri löm og teikniborði fyrir listaverkin.</p>
+<p>Þótt reynsla okkar af leikvöllum kunni að segja okkur að rólur sveiflist fram og til baka sýna myndir Róló Pendúlu að tilveran er öllu flóknari og fallegri en svo.</p>
+		<img src="{% static "itarefni/img/rolo-01ct.resized.jpg" %}" width="300" style="float:left;" />
+		<img src="{% static "itarefni/img/rolo-02ct.resized.jpg" %}" width="300" style="float:left;" />
+		<img src="{% static "itarefni/img/rolo-03ct.resized.jpg" %}" width="300" style="float:left;" />
+
+<h2 style="clear:both">Pendúlar</h2>
+<p>Rólur líkjast einföldum pendúl að því leyti að þær eru með eitthvað þungt sem getur sveiflast fram og til baka. Þegar einföldum pendúl er sleppt, sveiflast hann almennt í sporöskju en lögun hennar breytist ekkert. Pendúllinn getur líka sveiflast í beina línu eða hring, en það eru í raun bara sértilbrigði af sporöskjunni.</p>
+
+<p>Lykilatriðið fyrir mynstrin sem Róló Pendúla teiknar eru tíðnirnar sem hún getur sveiflast á. Tíðni pendúls segir hversu hratt hann sveiflast fram og til baka, og ákvarðast af lengd hans. Þannig sveiflast stuttur pendúll hraðar en langur. Þetta þekkir tónlistarfólk eflaust af taktmælum sem eru í raun bara pendúlar og takturinn stilltur með því að stilla lengdina.</p>
+
+<h2>Ósamhverfur pendúll</h2>
+		<img src="{% static "itarefni/img/rolo_pendula-upphengja.jpg" %}" width="240" style="float:right;" />
+<p>Róló Pendúla er þó ekki einfaldur pendúll. Ósamhverfur í upphengjunum valda því að lengd rólunnar er eilítið breytileg með stefnu sveiflunnar. Það má því líta á hana sem tvítóna pendúl því hún hefur tvær tíðnir eftir sveiflustefnu. Þegar sveiflur eftir meginstefnum rólunnar eru í takt sveiflast rólan í beina línu, annars í sporöskju eða hring. Ferillinn er þó síbreytilegur vegna þess að tíðnin er ólík og því eru stefnurnar sífellt að lenda í og úr takti.</p>
+
+<p>Þannig þróast hreyfing rólunnar eftir meginásunum úr og í takt, og skiptir um stefnu þess á milli.</p>
+
+<h2>Y-pendúllinn, frændi Róló</h2>
+		<img src="{% static "itarefni/img/y-pendull-upphengja.jpg" %}" width="240" style="float:right;" />
+<p>Til er einfaldari útgáfa af Róló Pendúlu sem sveiflast í samsvarandi mynstur þótt ekki sé neinn penni tengdur við þann pendúl. Hann er festur upp í tvær upphengjur, úr þeim liggja tveir spottar sem eru teknir saman stuttu neðar og frá þeim punkti liggur einn spotti niður að kólfi. Lögun pendúlsins frá lóði upp að upphengjum minnir þá á bókstafinn „Y“. Formið veldur því að pendullinn er mislangur fyrir sveiflur þvert á upphengjurnar og samsíða þeim.</p>
+
+<p>Í fyrra tilfellinu nær hreyfingin að upphengjum eð í því seinna hreyfist ekkert fyrir ofan hnútinn. Sé pendúlnum sleppt í stefnu mitt á milli þessara meginása pendúlsins leggjast þeir saman og pendullinn snýst í samsvarandi mynstur og Róló Pendúla.</p>
+
+<h2>Mynstrið</h2>
+<canvas id="persistCanvas" width="140" height="140" style="float:right; border: thin solid #eee;"></canvas>
+    <script>
+
+      window.requestAnimFrame = (function(callback) {
+        return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame ||
+        function(callback) {
+          window.setTimeout(callback, 1000 / 600);
+        };
+      })();
+
+      var canvas = document.getElementById('persistCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var amplitude = 70;
+
+      function drawCircle(circle, context) {
+        context.beginPath();
+        context.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI, false);
+        context.fillStyle = circle.colour;
+        context.fill();
+        context.lineWidth = 1;
+        context.strokeStyle = circle.colour;
+        context.stroke();
+        console.log(circle.radius);
+      }
+
+      function animate(canvas, context, startTime) {
+        // update
+        var time = (new Date()).getTime() - startTime;
+
+        // clear
+        //context.clearRect(centerX-1, 0, centerX+1, canvas.height);
+        context.clearRect(0, centerY-1, canvas.width, 2 );
+        context.clearRect(centerX-1, 0, 2, canvas.height);
+
+        xCircle.amplitude = 0.9999 * xCircle.amplitude;
+        yCircle.amplitude = 0.9999 * yCircle.amplitude;
+        xyCircle.amplitude = 0.9999 * xyCircle.amplitude;
+
+        newX = canvas.width/2 + xCircle.amplitude * Math.sin(xCircle.speed * time / 1000);
+        xCircle.x = newX
+        drawCircle(xCircle, context);
+
+        newY = canvas.width/2 + yCircle.amplitude* Math.sin(yCircle.speed * time / 1000);
+        yCircle.y = newY
+        drawCircle(yCircle, context);
+
+        xyCircle.x = xCircle.x;
+        xyCircle.y = yCircle.y;
+        drawCircle(xyCircle, context);
+
+        // request new frame
+        requestAnimFrame(function() {
+          //animate(myRectangle, canvas, context, startTime);
+          animate(canvas, context, startTime);
+        });
+      }
+
+      var xCircle = {
+        x: centerX,
+        y: centerY,
+        radius: 0.5,
+        speed: 1.04,
+        amplitude: 60,
+        colour: 'green',
+      };
+      var yCircle = {
+        x: centerX,
+        y: centerY,
+        radius: 0.5,
+        speed: 1,
+        amplitude: 60,
+        colour: 'green',
+      };
+      var xyCircle = {
+        x: centerX,
+        y: centerY,
+        radius: 0.1,
+        speed: 2,
+        amplitude: 40,
+        colour: 'red',
+      };
+
+      // wait one second before starting animation
+      setTimeout(function() {
+        var startTime = (new Date()).getTime();
+        //animate(myRectangle, canvas, context, startTime);
+        animate(canvas, context, startTime);
+      }, 100);
+    </script>
+<p>Sé mikill munur á lengdum pendúlsins verður þróun á sveiflumynstrinu hröð. Langásar sporbauganna skipta þá ört a milli tveggja stefna og mynstrið verður gisið. Með því að jafna lengdirnar taka allar breytingar lengri tíma og mynstrið verður þéttara og einsleitara.</p>
+
+<p>Í tilviki Rólo Pendúlu er það mismunur í krappa hringjanna og karabínanna sem rólan hangir í sem veldur þessum mun á sveiflutíma rólunnar. Það er hægt að breyta muninum með því að snúa upp á upphengjurnar eða toga þær saman.</p>
+
+<p>Annað sem gerir myndir Róló Pendúlu svona fallegar er það að útslag sveiflunnar er sífellt að minnka. Því veldur aðallega viðnám í upphengjunum en eitthvað er vegna loftmótstöðu og núnings í pennanum þegar hann dregst eftir síðunni.</p>
+
+<p>Þetta veldur orkutapi í sveiflunni sem minnkar sveifluna jafnt og þétt. Við getum ekki losnað við þetta orkutap en til lengja teiknitímann og þétta myndina getum við hlaðið lóðum á róluna svo hún hafi meiri orku til að byrja með.</p>
+
+<h2>Hviður í hljóði</h2>
+<p>Mynstur lík því sem Roló Pendúla dregur svo listilega má finna hvarvetna þar sem tvær sveiflur blandast saman. Þannig geta hljóðbylgjur líka blandast saman og ef tveir likir tónar eru spilaðir myndast svokallaðar hviður þar sem tónarnir annað hvort styrkja hvor annan (þegar þeir eru í takt) eða eyða hvor öðrum (þegar þeir eru úr takti).</p>
+
+<p>Tíðni þessara hviða ræðst af muninum í tíðni (eða tónhæð) hljóðsins. Ef tónarnir eru líkir (líkt og með mynstur Y-pendúlsins) verður hæg breyting og hægar hviður. Sé munurinn mikill verður hröð breyting þannig að almennt heyrum við ekki hviðurnar sem myndast á milli ólíkra tóna.</p>
+
+{% endblock %}
