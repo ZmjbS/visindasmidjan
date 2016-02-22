@@ -8,11 +8,15 @@
 
 .itarefni .titill { display: block; overflow: hidden; white-space: nowrap; position: relative; top: -1.7em; padding: 2px; font-size: 1.5em; font-weight: bold; background-color: #ddd; }
 
-.hugleiding, .hugtakaskyring, .leidbeiningar_hlid { float: right; position: absolute; right: -22em; border-width: 3px; border-style: solid; width: 20em; padding: .3em; margin: .2em; }
+.hugleiding, .hugtakaskyring, .vidaukabutur, .leidbeiningar_hlid { float: right; position: absolute; right: -22em; border-width: 3px; border-style: solid; width: 20em; padding: .3em; margin: .2em; }
 
 .hugleiding { border-color: purple; background-color: #d8a; }
 .hugtakaskyring { border-color: green; background-color: #8d8; }
 .hugtakaskyring em { font-weight: bold; }
+.vidaukabutur { border-color: blue; background-color: lightblue; }
+
+.bordi { width: 950px; height: 160px; position: relative; margin-bottom: .5em; }
+.bordatexti { font-size: 3em; position: absolute; bottom: 0; left: 0.5em; width: 400px; font-weight: bold; color: #fff; }
 
 /* Skráningarsíður */
 form.bokun { width: 270px; padding: 3px; margin: 13px; float: left; }
