@@ -1,7 +1,11 @@
 /* Forsíða */
-#meginefni { width: 66%; float: left; }
-#bokatima, #itarefni { width: 45%; width: calc(50% - 1em); float: left; padding: .5em; }
+#meginefni div { margin-left: 10px; }
+#meginefni div:first-child { margin-left: 0px; }
+#bokatima, #itarefni, #um_visindasmidjuna { width: 310px; float: left; padding: 0em; }
 #frettir { padding: .5em; clear: both; }
+
+.frett { float: left; width: 230px; margin-left: 10px; padding: 0px; margin: 0px }
+.frett:first-child { margin-left: 0px; }
 
 /* Ítarefni (smá á skráningarsíðum) */
 .itarefni { float: left; width: 220px; border: thin solid grey; height: 220px; margin: 5px; }
@@ -16,6 +20,7 @@
 .vidaukabutur { border-color: blue; background-color: lightblue; }
 
 .bordi { width: 950px; height: 160px; position: relative; margin-bottom: .5em; }
+.bordi-3 { width: 310px; height: 100px; position: relative; margin-bottom: .5em; }
 .bordatexti { font-size: 3em; position: absolute; bottom: 0; left: 0.5em; width: 400px; font-weight: bold; color: #fff; }
 
 /* Skráningarsíður */
