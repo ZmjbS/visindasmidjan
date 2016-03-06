@@ -1,4 +1,5 @@
 {% extends "visindasmidjan.html" %}
+{% load staticfiles %}
 {% block title %}
 Vísindasmiðjan
 {% endblock %}
@@ -7,106 +8,81 @@ Vísindasmiðjan
 
 <div id="meginefni">
 	<div id="bokatima">
-		<h2>Bóka tíma</h2>
-		<p>Vísindasmiðjan býður upp á tíma fyrir allt að 25 manna skólahópa í 2.-10. bekk. Tímarnir eru á <strong>mánudögum</strong>, <strong>þriðjudögum</strong> og <strong>föstudögum</strong>, annars vegar klukkan <strong>9:15</strong> og <strong>11:00</strong>.</p>
-		<p>Upplýsingar um lausa tíma og bókunarform er að finna <strong><a href="/skraning/">hér</a></strong>.</p>
+		<a href="/skraning/">
+			<div class="bordi-3" style="background: url({% static "img/bordi-boka_tima.310x100px.jpeg" %});">
+				<div class="bordatexti">Bóka tíma</div>
+			</div>
+		</a>
+		<p>Vísindasmiðjan býður upp á tíma fyrir allt að 25 manna skólahópa. Tímarnir eru <strong>9:15–10:45</strong> og <strong>11:00–12:30</strong>, <strong>þriðjudaga</strong> til <strong>föstudaga</strong>.</p>
 	</div>
 	<div id="itarefni">
-		<h2>Ítarefni</h2>
-		<p>Á <strong><a href="/itarefni/">ítarefnissíðunni</a></strong> er að finna efni um uppstillingarnar sem við erum með hjá okkur í Vísindasmiðjunni, auk efnis tengt spjallinu við vísindamanninn.</p>
-	</div>
-	<div id="frettir">
-		<h2>Fréttir og viðburðir</h2>
-		<div class="field-content frettirMyndNedan">
-			<a href="/visindasmidjan_og_barnamenningarhatid">
-				<img typeof="foaf:Image" src="http://visindasmidjan.hi.is/sites/visindasmidjan.hi.is/files/styles/box_thumb/public/barnamenningarhatidvisindasmidja1.jpg?itok=FdMR_vcO" width="83" height="83" alt="Vísindasmiðja og Barnamenningarhátíð" />
-			</a>
-			<span class="field-content">
-				<a href="/visindasmidjan_og_barnamenningarhatid">Vísindasmiðjan og Barnamenningarhátíð</a>
-			</span>
-			<div class="views-field views-field-created">
-				<span class="field-content">04. okt. 2013</span>
+		<a href="/itarefni/">
+			<div class="bordi-3" style="background: url({% static "img/bordi-itarefni-310x100px.jpeg" %});">
+				<div class="bordatexti">Ítarefni</div>
 			</div>
-		</div>
-
-		<div class="views-field views-field-title">
-			<span class="field-content"><a href="http://ung.hi.is/node/359 ">Vísindasmiðjan ferðast með Háskólalestinni</a></span>
-			<p>Í sumar hefur Vísindasmiðjan ferðast víða með svokallaðri Háskólalest. Við fórum á Laugarvatn, til Vestmannaeyja, Hólmavíkur, Dalvíkur og á Snæfellsnes. Við þökkum góðar móttökur á öllum þessum stöðum!</p>
-		</div>  
-
-		<div class="views-field views-field-title">
-			<span class="field-content">Vísindasmiðjan er komin á fullt eftir gott jólafrí og er nú opin á mánudögum, þriðjudögum og föstudögum. Vísindasmiðjan er gríðarlega vinsæl hjá...</span>
-		</div>  
-	</div>  
-
-</div>
-<div style="width: 33%; float: left;">
-	<div style="width: 100%">
-		<h2>Um vísindasmiðjuna</h2>
-		<div>Vísindasmiðja Háskóla Íslands var opnuð vorið 2012 í Háskólabíói.</div>
-		<div>Markmið smiðjunnar er að efla áhuga ungmenna á vísindum og fræðum með gagnvirkum og lifandi hætti og styðja þannig við kennslu á sviði náttúru- og raunvísinda.</div>
-													<p>Vísindasmiðja Háskóla Íslands er í góðu samstarfi við Raunvísindastofnun HÍ, Samtök Iðnaðarins og Orkuveitu Reykjavíkur um að efla áhuga ungs fólks á vísindum og fræðum.</p>
-		<p><a href="http://www.hi.is/frettir/geggjud_ferd_i_alla_stadi">„Geggjuð ferð í alla staði“</a></p>
-		<p><a href="/node/155">„Mér fannst allt frábært og snilld“</a></p>
+		</a>
+		<p>Hér má finna efni um uppstillingar sem við erum með hjá okkur í Vísindasmiðjunni, auk annars ítarefnis tengt vísindaspjalli og vinnusmiðjum sem í boði eru.</p>
 	</div>
+	<div id="um_visindasmidjuna">
+		<a href="/um_visindasmidjuna/">
+			<div class="bordi-3" style="background: url({% static "img/bordi-starfsfolk-310x100px.jpeg" %});">
+				<div class="bordatexti">Um Smiðjuna</div>
+			</div>
+		</a>
+		<p>Markmið Vísindasmiðju Háskóla Íslands er að efla áhuga ungmenna á vísindum og fræðum með gagnvirkum og lifandi hætti, og styðja þannig við kennslu á sviði náttúru- og raunvísinda.</p>
+	</div>
+</div> <!-- #meginefni -->
 
-	<div style="width: 100%; float: left;">
-		<h2>Vísindasmiðjan á Facebook</h2>
-		<p><a href="https://www.facebook.com/Visindasmidjan">Á Facebook síðu Vísindasmiðjunar</a> geta nemendur og kennarar sett inn myndir frá heimsóknum, sagt frá því sem þeim fannst áhugaverðast, rætt um vísindi og fylgst með fréttum frá smiðjunni.</p>
+<div id="frettir">
+	<h2>Fréttir og viðburðir</h2>
+	<div class="frett">
+		<div class="frettamynd">
+			<img width="218" height="200" title="Heimsókn hælisleitenda í Vísindasmiðju" alt="Heimsókn hælisleitenda í Vísindasmiðju" src="{% static 'frettir/img/haelisleitendur1_vefur.jpeg' %}"></img>
+		</div>
+		<div class="frettatexti">
+			<span class="field-content"><a href="/starfsfolk_visindasmidju_tok_a_moti_haelisleitendum"> Starfsfólk Vísindasmiðju tók á móti hælisleitendum</a></span>
+		</div>
+		<div class="views-field views-field-body">
+			<span class="field-content">Vísindasmiðja Háskóla Íslands fékk til sín góða ge… </span>
+		</div>
+	</div>
+	<div class="frett">
+		<div class="frettamynd">
+			<img width="218" height="200" alt="Háskóli Íslands" src="{% static 'frettir/img/fludaskoli.png' %}"></img>
+		</div>
+		<div class="frettatexti">
+			<span class="field-content"><a href="/visindasmidjan_i_fludaskola">Vísindasmiðjan í Flúðaskóla</a></span>
+		</div>
+		<div class="views-field views-field-body"><span class="field-content">Baldur heldur utan um vindmyllusmiðjur í Vísindasm</span></div>
+	</div>
+	<div class="frett">
+		<div class="frettamynd">
+			<img width="218" height="200" title="Jólakveðja Vísindasmiðjunnar" alt="Jólakveðja Vísindasmiðjunnar" src="{% static 'frettir/img/visindasmidjan_jolakvedja.jpg' %}"></img>
+		</div>
+		<div class="frettatexti">
+			<a href="/gledileg_jol">Gleðileg jól!</a></span>
+		</div>
+		<div class="views-field views-field-body"> <span class="field-content"> Árið 2015 var viðburðarríkt hjá Vísindasmiðjunni. … </span> </div>
+	</div>
+	<div class="frett">
+		<div class="frettamynd">
+			<img width="218" height="200" title="Vísindasmiðjan með opið hús" alt="Vísindasmiðjan með opið hús" src="{% static 'frettir/img/lego.jpg'%}"></img>
+		</div>
+		<div class="views-field views-field-title">
+			<span class="field-content"><a href="/first_lego_league_keppni_og_visindasmidjan_opin">FIRST LEGO League keppni og Vísindasmiðjan opin</a></span>
+		</div>
+		<div class="views-field views-field-body"><span class="field-content">Vísindasmiðjan var opin fyrir gesti og gangandi sí…</span></div>
 	</div>
 </div>
 
-<br style="clear:both"/>
-<!--
-<div id="zone-content-wrapper" class="zone-wrapper zone-content-wrapper clearfix">
-	<div id="zone-content" class="zone zone-content clearfix container-12">
-		<aside class="grid-4 region region-sidebar-first" id="region-sidebar-first">
-			<div class="region-inner region-sidebar-first-inner">
+<div id="samfelagsmidlar">
+	<h2>Vísindasmiðjan á samfélagsmiðlum</h2>
+	<p>Fylgist með fréttum af starfi Vísindasmiðjunnar, nýjum tækjum og opnum dögum á <a href="https://www.facebook.com/Visindasmidjan">Facebook síðu Vísindasmiðjunar</a>. Smiðjan er svo með myllumerkið <a href="https://www.instagram.com/explore/tags/v%C3%ADsindasmi%C3%B0jan/">#vísindasmiðjan</a> eða <a href="https://www.instagram.com/explore/tags/visindasmidjan/">#visindasmidjan</a>.</p>
 
+<!-- SnapWidget -->
+<script src="http://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="http://snapwidget.com/in/?h=dmlzaW5kYXNtaWRqYW58aW58MTI1fDZ8MXx8bm98NXxub25lfG9uU3RhcnR8bm98eWVz&ve=060316" title="Instagram Widget" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%;"></iframe>
 
-			<section class="block block-views block-v-sindavefurinn-block block-views-v-sindavefurinn-block even" id="block-views-v-sindavefurinn-block">
-				<div class="block-inner clearfix">
-					<h2 class="block-title">Vísindavefurinn</h2>
-					<div class="content clearfix">
-						<div class="view view-v-sindavefurinn view-id-v_sindavefurinn view-display-id-block view-dom-id-e52e95b3beab157744ecc96f5c47f2b5">
-							<div class="view-content">
-								<div class="item-list">
-									<ul class="rotera">
-										<li class="views-row views-row-1 views-row-odd views-row-first">
-										<div class="views-field views-field-title">
-											<span class="field-content">Hvernig fer títrun á edikssýru með natrínhýdroxíði fram?</span>
-										</div>
-										<div class="views-field views-field-link">
-											<span class="field-content"><a href="http://www.visindavefur.is/?id=68332" class="visindavefur right">Skoða svar</a></span>
-										</div>
-										</li>
-										<li class="views-row views-row-2 views-row-even">
-										<div class="views-field views-field-title">
-											<span class="field-content">Hvaða munur er á hugtökunum náttúruhamfarir og náttúruvá?</span>
-										</div>
-										<div class="views-field views-field-link">
-											<span class="field-content"><a href="http://www.visindavefur.is/?id=68712" class="visindavefur right">Skoða svar</a></span>
-										</div>
-										</li>
-										<li class="views-row views-row-3 views-row-odd views-row-last">
-										<div class="views-field views-field-title">
-											<span class="field-content">Hversu þykkur jökull huldi Reykjavík á síðasta jökulskeiði?</span>
-										</div>
-										<div class="views-field views-field-link">
-											<span class="field-content"><a href="http://www.visindavefur.is/?id=69018" class="visindavefur right">Skoða svar</a></span>
-										</div>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-		</div>
-	</aside>
 </div>
--->
-  
+
 {% endblock %}
