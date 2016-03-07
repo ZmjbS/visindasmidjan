@@ -73,7 +73,7 @@ from calendar import HTMLCalendar
 from datetime import date
 from itertools import groupby
 import locale
-locale.setlocale(locale.LC_ALL, 'is_IS')
+locale.setlocale(locale.LC_ALL, 'is_IS.utf-8')
 
 class Timadagatal(HTMLCalendar):
 
